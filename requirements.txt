@@ -1,6 +1,6 @@
 apache-beam[gcp]
 bidict
-# bpy   (the Blender python module. Cannot be pip-installed)
+bpy==2.91a0
 dataclasses
 etils[epath_no_tf]
 cloudml-hypertune
@@ -15,6 +15,7 @@ python-Levenshtein
 scikit-learn
 singledispatchmethod
 tensorflow
-tensorflow-datasets>=4.1.0
+tensorflow-datasets==4.1.0
 traitlets
+pybullet
 trimesh

@@ -92,7 +92,7 @@ setuptools.setup(
         "Topic :: Multimedia :: Graphics :: 3D Rendering",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
-    python_requires='>=3.9',
+    python_requires='>=3.7',
 )
 
 # --- Revert the version in the local folder

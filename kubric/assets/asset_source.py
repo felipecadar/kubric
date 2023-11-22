@@ -107,7 +107,6 @@ class AssetSource(ClosableResource):
   def __exit__(self, exc_type, exc_val, exc_tb):
     self.close()
 
-  @functools.cached_property
   def db(self):
     import pandas as pd
     db = pd.DataFrame([{"id": k} | v["kwargs"] | v["metadata"]
@@ -123,12 +122,10 @@ class AssetSource(ClosableResource):
       db["category_id"] = db.apply(get_category_id, axis=1)
     return db
 
-  @functools.cached_property
   def categories(self):
     return sorted(filter(None, {v["metadata"].get("category", "")
                                 for v in self._assets.values()}))
 
-  @functools.cached_property
   def all_asset_ids(self):
     return sorted(self._assets.keys())
 
