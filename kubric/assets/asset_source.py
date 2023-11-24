@@ -125,7 +125,7 @@ class AssetSource(ClosableResource):
   def categories(self):
     return sorted(filter(None, {v["metadata"].get("category", "")
                                 for v in self._assets.values()}))
-
+  @property
   def all_asset_ids(self):
     return sorted(self._assets.keys())
 
