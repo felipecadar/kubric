@@ -18,4 +18,5 @@ tensorflow
 tensorflow-datasets==4.1.0
 traitlets
 pybullet
-trimesh
+trimesh==3.23.5
+OpenEXR
